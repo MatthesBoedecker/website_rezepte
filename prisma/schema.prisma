@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model rezepte {
+  rezept_id Int       @id @default(autoincrement())
+  user_id   Int
+  title     String    @db.VarChar(255)
+  image     String    @db.VarChar(255)
+  text      String    @db.Text
+  user      user      @relation(fields: [user_id], references: [user_id], onDelete: Cascade, map: "user_id_fk")
+  zutaten   zutaten[]
+
+  @@index([user_id], map: "user_id_fk")
+}
+
+model user {
+  user_id  Int       @id @default(autoincrement())
+  username String    @db.VarChar(255)
+  password String    @db.VarChar(255)
+  rezepte  rezepte[]
+}
+
+model zutaten {
+  zutat_id  Int     @id @default(autoincrement())
+  rezept_id Int
+  zutat     String  @db.VarChar(255)
+  rezepte   rezepte @relation(fields: [rezept_id], references: [rezept_id], onDelete: Cascade, map: "zutaten_ibfk_1")
+
+  @@index([rezept_id], map: "rezept_id")
+}

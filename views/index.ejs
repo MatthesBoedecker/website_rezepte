@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de" data-bs-theme="dark">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body>
+    <%- include('partials/header'); %>
+        <div class="row">
+            <% for (let i=0; i < recipes.length ; i++) { %>
+                <div class="col-md-4">
+                    <article class="container text-white p-3">
+                        <div class="card">
+                            <h4 class="card-header">
+                                <%= recipes[i].title %>
+                            </h4>
+                            <!-- <div class="card-body">
+                            <ul>
+                                <li>500 g Rinderhackfleisch</li>
+                                <li>1 Ei</li>
+                                <li>1 Zwiebel, fein gehackt</li>
+                                <li>2 EL Semmelbrösel</li>
+                                <li>Salz und Pfeffer</li>
+                                <li>4 Burgerbrötchen</li>
+                                <li>4 Scheiben Käse</li>
+                                <li>Salatblätter</li>
+                                <li>Tomatenscheiben</li>
+                                <li>Gurkenscheiben</li>
+                                <li>Mayonnaise, Ketchup, Senf</li>
+                            </ul>
+                            <ol>
+                                <li><strong>Hackfleischmischung vorbereiten:</strong> Rinderhackfleisch, Ei, gehackte
+                                    Zwiebel,
+                                    Semmelbrösel,
+                                    Salz und Pfeffer in eine Schüssel geben und gut vermischen.</li>
+                                <li><strong>Pattys formen:</strong> Aus der Mischung vier gleich große Pattys formen.
+                                </li>
+                                <li><strong>Pattys braten:</strong> Eine Pfanne erhitzen und die Pattys bei mittlerer
+                                    Hitze von
+                                    beiden
+                                    Seiten etwa 4-5 Minuten braten, bis sie durchgegart sind. Optional: Käse auf die
+                                    Pattys
+                                    legen
+                                    und
+                                    schmelzen lassen.</li>
+                                <li><strong>Brötchen vorbereiten:</strong> Die Burgerbrötchen halbieren und kurz in der
+                                    Pfanne
+                                    oder
+                                    im
+                                    Toaster anrösten.</li>
+                                <li><strong>Burger zusammenstellen:</strong> Die unteren Hälften der Brötchen mit
+                                    Mayonnaise,
+                                    Ketchup oder
+                                    Senf bestreichen. Dann Salatblätter, Tomatenscheiben, Gurkenscheiben und die
+                                    gebratenen
+                                    Pattys
+                                    darauflegen. Mit den oberen Hälften der Brötchen abdecken.</li>
+                                <li><strong>Servieren:</strong> Die Burger sofort servieren und genießen!</li>
+                            </ol>
+                        </div> -->
+
+                            <div class="card-body">
+                                <%= recipes[i].text %>
+                            </div>
+                            <img class="card-img-bottom" src="<%= recipes[i].image %>" alt="Hunger D:"
+                                style="width:100%">
+                        </div>
+                    </article>
+                </div>
+                <% } %>
+                    <!-- 
+            <div class="col-md-4">
+                <article class="container text-white p-3">
+                    <div class="card">
+                        <h4 class="card-header">Lasagne</h4>
+                        <div class="card-body">
+                            <ul>
+                                <li>500 g Rinderhackfleisch</li>
+                                <li>1 Zwiebel, fein gehackt</li>
+                                <li>2 Knoblauchzehen, gehackt</li>
+                                <li>2 Karotten, gewürfelt</li>
+                                <li>800 g stückige Tomaten aus der Dose</li>
+                                <li>2 TL getrockneter Oregano</li>
+                                <li>50 g Butter</li>
+                                <li>40 g Mehl</li>
+                                <li>500 ml Milch</li>
+                                <li>¼ TL gemahlene Muskatnuss</li>
+                                <li>150 g Lasagneplatten</li>
+                                <li>60 g geriebener Parmesan</li>
+                                <li>Salz und Pfeffer</li>
+                                <li>Olivenöl</li>
+                            </ul>
+                            <ol>
+                                <li><strong>Bolognese-Sauce:</strong> Olivenöl in einer Pfanne erhitzen und das
+                                    Hackfleisch darin
+                                    anbraten.
+                                    Zwiebel, Knoblauch und Karotten hinzufügen und mitbraten. Stückige Tomaten und
+                                    Oregano dazugeben, mit
+                                    Salz und Pfeffer würzen und etwa 30 Minuten köcheln lassen.</li>
+                                <li><strong>Béchamelsauce:</strong> Butter in einem Topf schmelzen, Mehl einrühren und
+                                    kurz anschwitzen.
+                                    Nach und nach die Milch unter Rühren hinzufügen, bis eine glatte Sauce entsteht. Mit
+                                    Salz, Pfeffer und
+                                    Muskatnuss abschmecken.</li>
+                                <li><strong>Lasagne schichten:</strong> Eine Auflaufform einfetten und eine Schicht
+                                    Bolognese-Sauce auf
+                                    den
+                                    Boden geben. Eine Schicht Lasagneplatten darauflegen, dann eine Schicht
+                                    Béchamelsauce. Diesen Vorgang
+                                    wiederholen, bis alle Zutaten aufgebraucht sind. Mit einer Schicht Béchamelsauce
+                                    abschließen und den
+                                    geriebenen Parmesan darüberstreuen.</li>
+                                <li><strong>Backen:</strong> Die Lasagne im vorgeheizten Ofen bei 180°C (Umluft) etwa
+                                    30-40 Minuten
+                                    backen,
+                                    bis sie goldbraun ist.</li>
+                                <li><strong>Servieren:</strong> Die Lasagne etwas abkühlen lassen und dann in Stücke
+                                    schneiden. Guten
+                                    Appetit!</li>
+                            </ol>
+                        </div>
+                        <img class="card-img-bottom" src="img/Lasagne.jpg" alt="Hunger D:" style="width:100%">
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-4">
+                <article class="container text-white p-3">
+                    <div class="card">
+                        <h4 class="card-header">Spätzle</h4>
+                        <div class="card-body">
+                            <ul>
+                                <li>400 g Mehl</li>
+                                <li>4 Eier</li>
+                                <li>200 ml Wasser</li>
+                                <li>1 TL Salz</li>
+                                <li>Optional: eine Prise Muskatnuss</li>
+                            </ul>
+                            <ol>
+                                <li><strong>Teig vorbereiten:</strong> Mehl, Eier, Wasser und Salz in eine Schüssel
+                                    geben und mit einem
+                                    Holzlöffel oder einem Handrührgerät zu einem glatten Teig verrühren. Der Teig sollte
+                                    zähflüssig sein und
+                                    Blasen werfen.</li>
+                                <li><strong>Teig ruhen lassen:</strong> Den Teig etwa 10 Minuten ruhen lassen.</li>
+                                <li><strong>Wasser aufkochen:</strong> Einen großen Topf mit Salzwasser zum Kochen
+                                    bringen.</li>
+                                <li><strong>Spätzle formen:</strong> Den Teig portionsweise durch eine Spätzlepresse
+                                    oder einen
+                                    Spätzlehobel
+                                    ins kochende Wasser drücken. Alternativ kann man den Teig auch von einem nassen
+                                    Brett mit einem Messer
+                                    ins Wasser schaben.</li>
+                                <li><strong>Kochen:</strong> Die Spätzle sind fertig, wenn sie an die Oberfläche
+                                    steigen. Mit einem
+                                    Schaumlöffel herausnehmen und kurz in kaltem Wasser abschrecken.</li>
+                                <li><strong>Servieren:</strong> Die Spätzle können direkt serviert oder in Butter
+                                    geschwenkt und mit Käse
+                                    bestreut werden.</li>
+                            </ol>
+                        </div>
+                        <img class="card-img-bottom" src="img/Spaetzle.jpg" alt="Hunger D:" style="width:100%">
+                    </div>
+                </article>
+            </div>
+        </div> -->
+
+                    <div class="modal fade" id="addRecipe">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5">Rezept erstellen</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <form action="/add" method="post">
+                                    <div class="modal-body">
+                                        <label for="rTitle">Rezept Name</label>
+                                        <input type="text" id="rTitle" name="rTitle" class="form-control" required>
+                                        <br>
+                                        <label for="rImage">Link zum Bild vom Rezept</label>
+                                        <input type="text" id="rImage" name="rImage" class="form-control" required>
+                                        <br>
+                                        <label for="rText">Rezept Text</label>
+                                        <input type="text" id="rText" name="rText" class="form-control" required>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Save as new</button>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="changeRecipe">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5">Rezept erstellen</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <form action="/change" method="post">
+                                    <div class="modal-body">
+
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+        <%- include('partials/footer'); %>
+            <!-- e.preventDefault();
+
+            const formData = new FormData(this);
+            const recipeData = Object.fromEntries(formData.entries());
+
+            /* try {
+            const response = await fetch('index', {
+            method: 'PostToServer',
+            headers: {
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(recipeData)
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+            document.getElementById('message').innerHTML =
+            '<div class="alert alert-success">Benutzer erfolgreich erstellt!</div>';
+            this.reset();
+            } else {
+            document.getElementById('message').innerHTML =
+            `<div class="alert alert-danger">${result.error}</div>`;
+            }
+            } catch (error) {
+            console.error('Fehler:', error);
+            document.getElementById('message').innerHTML =
+            '<div class="alert alert-danger">Ein Fehler ist aufgetreten.</div>';
+            } */
+            }); 
+        </script>
+        -->
+</body>
+
+</html>
