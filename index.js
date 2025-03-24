@@ -6,7 +6,7 @@ const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
 const crypto = require("crypto");
 var user = null;
-const https = require("https"); 
+//const https = require("https"); 
 const fs = require("fs"); 
  
 const options = { 
@@ -52,12 +52,14 @@ module.exports = app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 })
 
+/*
 // HTTPS-Server starten 
 https.createServer(options, app).listen(443, () => { 
 
       console.log("HTTPS Server läuft auf https://localhost:443"); 
     
     }); 
+    */
 
 app.get('/login', (req, res) => {
     res.render('login', { errorMessage: "" })
