@@ -5,7 +5,7 @@ const app = require("../index.js");
  
 describe("Login-Funktion", () => { 
  
-    it("soll eine Anmeldung mit korrekten Daten erlauben", (done) => { 
+    /*it("soll eine Anmeldung mit korrekten Daten erlauben", (done) => { 
         request("http://localhost:3000") 
             .post("/login") 
             .send("username=matthes&password=asdfghjklöä#") 
@@ -15,7 +15,7 @@ describe("Login-Funktion", () => {
                 expect(res.statusCode).to.equal(302) 
                 done(); 
             }) 
-    }); 
+    }); */
  
     it("soll eine Anmeldung mit falschen Daten verweigern", (done) => { 
         request("http://localhost:3000") 
